@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So'z O'yini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <div class="start-container">
+            <h1 class="game-title">🎯 So'z O'yini</h1>
+            <p class="game-description">Tepadan tushayotgan so'zlarni klaviaturada yozing!</p>
+            <button id="start-btn" class="btn-start">O'yinni Boshlash</button>
+            <div class="best-record">
+                <span class="record-icon">🏆</span>
+                <span>Eng yaxshi natija: <strong id="best-record">0</strong> so'z</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <!-- Header with stats -->
+        <div class="game-header">
+            <div class="stat-box score-box">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-label">Ball:</span>
+                <span id="score" class="stat-value">0</span>
+            </div>
+            <div class="header-right">
+                <div class="stat-box record-box">
+                    <span class="stat-icon">🏆</span>
+                    <span class="stat-label">Rekord:</span>
+                    <span id="record" class="stat-value">0</span>
+                </div>
+                <div class="stat-box time-box">
+                    <span class="stat-icon">⏱️</span>
+                    <span class="stat-label">Vaqt:</span>
+                    <span id="timer" class="stat-value">0s</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Field -->
+        <div id="game-field">
+            <div id="words-container"></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="word-input" placeholder="So'zni yozing..." autocomplete="off" autofocus>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen hidden">
+        <div class="gameover-container">
+            <h2 class="gameover-title">O'yin Tugadi! 😢</h2>
+            <div class="final-stats">
+                <div class="final-stat">
+                    <span class="final-label">Sizning natijangiz:</span>
+                    <span id="final-score" class="final-value">0</span>
+                </div>
+                <div class="final-stat">
+                    <span class="final-label">O'yin vaqti:</span>
+                    <span id="final-time" class="final-value">0s</span>
+                </div>
+                <div id="new-record" class="new-record hidden">
+                    🎉 Yangi Rekord! 🎉
+                </div>
+            </div>
+            <button id="restart-btn" class="btn-start">Qayta O'ynash</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
